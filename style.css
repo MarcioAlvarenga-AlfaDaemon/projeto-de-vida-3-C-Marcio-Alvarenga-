@@ -1,4 +1,3 @@
-```css id="1s6g2l"
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
 
 :root {
@@ -28,22 +27,18 @@ body {
     font-family: 'Chakra Petch', sans-serif;
     min-height: 100vh;
     padding: 30px;
-
     overflow-x: hidden;
 }
 
-/* LINHAS DE FUNDO */
+/* GRID DE FUNDO CYBERPUNK */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-
     background-image:
         linear-gradient(rgba(0, 229, 255, 0.08) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 229, 255, 0.08) 1px, transparent 1px);
-
     background-size: 40px 40px;
-
     z-index: -1;
 }
 
@@ -52,7 +47,6 @@ body::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -61,23 +55,17 @@ body::before {
 .titulo-principal {
     font-size: clamp(30px, 5vw, 48px);
     text-align: center;
-
     margin-bottom: 40px;
-
     text-transform: uppercase;
     letter-spacing: 3px;
-
-    color: var(--azul-neon);
-
+    color: var(--branco);
     text-shadow:
-        0 0 5px var(--azul-neon),
-        0 0 15px var(--azul-neon),
-        0 0 30px var(--azul-neon);
+        0 0 10px var(--azul-neon),
+        0 0 20px var(--azul-neon);
 }
 
 .titulo-principal span {
     color: var(--rosa-neon);
-
     text-shadow:
         0 0 10px var(--rosa-neon),
         0 0 20px var(--rosa-neon);
@@ -92,54 +80,32 @@ body::before {
 
 .botao {
     flex: 1;
-
     padding: 18px;
-
     background: var(--botao-inativo);
-
     color: var(--branco);
-
     border: 1px solid var(--azul-neon);
-
     font-size: 16px;
     font-weight: bold;
-
     transition: 0.3s;
-
     backdrop-filter: blur(5px);
-
-    position: relative;
-
-    overflow: hidden;
 }
 
-/* EFEITO HOVER */
 .botao:hover {
     background: var(--botao-ativo);
-
     transform: translateY(-3px);
-
     box-shadow:
         0 0 10px var(--azul-neon),
         0 0 25px var(--azul-neon);
 }
 
-/* BOTÃO ATIVO */
 .botao.ativo {
-    background: linear-gradient(
-        135deg,
-        var(--roxo),
-        #120024
-    );
-
+    background: linear-gradient(135deg, var(--roxo), #120024);
     border-bottom: 3px solid var(--verde-neon);
-
     box-shadow:
         0 0 15px var(--verde-neon),
         0 0 30px var(--verde-neon);
 }
 
-/* BORDAS */
 .botao:first-child {
     border-radius: 20px 0 0 0;
 }
@@ -148,32 +114,23 @@ body::before {
     border-radius: 0 20px 0 0;
 }
 
-/* ÁREA DAS ABAS */
+/* ABAS */
 .abas-textos {
     width: 100%;
-
     padding: 40px;
-
     background: var(--texto-fundo);
-
     border: 1px solid rgba(0, 229, 255, 0.3);
-
     border-radius: 0 0 20px 20px;
-
     backdrop-filter: blur(10px);
-
-    box-shadow:
-        0 0 15px rgba(0, 229, 255, 0.2);
 }
 
-/* CONTEÚDO */
+/* CONTEÚDO DAS ABAS */
 .aba-conteudo {
     display: none;
 }
 
 .aba-conteudo.ativo {
     display: block;
-
     animation: fade 0.5s ease;
 }
 
@@ -182,104 +139,75 @@ body::before {
         opacity: 0;
         transform: translateY(10px);
     }
-
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* TÍTULOS */
+/* TÍTULOS DAS ABAS */
 .aba-conteudo-titulo-principal {
     font-size: 30px;
-
     text-align: center;
-
     margin-bottom: 15px;
-
-    color: var(--rosa-neon);
-
-    text-shadow:
-        0 0 10px var(--rosa-neon);
+    color: var(--branco);
+    text-shadow: 0 0 10px var(--rosa-neon);
 }
 
 .aba-conteudo-titulo-secundario {
     text-align: center;
-
     text-transform: uppercase;
-
-    color: var(--verde-neon);
-
+    color: var(--branco);
     margin-bottom: 40px;
-
     letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--verde-neon);
 }
 
 /* CONTADOR */
 .contador {
     display: flex;
-
     justify-content: center;
-
     flex-wrap: wrap;
-
     gap: 20px;
 }
 
-/* CARD DO CONTADOR */
+/* CARD */
 .contador-digito {
     min-width: 120px;
-
     padding: 20px;
-
     border: 1px solid rgba(0, 229, 255, 0.3);
-
     background: rgba(255, 255, 255, 0.03);
-
     border-radius: 15px;
-
     text-align: center;
-
     backdrop-filter: blur(8px);
-
-    box-shadow:
-        0 0 10px rgba(0, 229, 255, 0.2);
-
     transition: 0.3s;
 }
 
 .contador-digito:hover {
     transform: scale(1.05);
-
-    box-shadow:
-        0 0 20px var(--azul-neon);
+    box-shadow: 0 0 20px var(--azul-neon);
 }
 
-/* NÚMEROS */
+/* NÚMEROS (BRANCOS) */
 .contador-digito-numero {
     font-size: 70px;
-
-    color: var(--azul-neon);
-
+    color: var(--branco);
     text-shadow:
         0 0 10px var(--azul-neon),
         0 0 25px var(--azul-neon);
 }
 
-/* TEXTO */
+/* TEXTOS (BRANCOS) */
 .contador-digito-texto {
     font-size: 18px;
-
-    color: var(--verde-neon);
-
+    color: var(--branco);
     text-transform: uppercase;
-
     letter-spacing: 2px;
+    text-shadow: 0 0 10px var(--verde-neon);
 }
 
 /* RESPONSIVO */
 @media screen and (max-width: 768px) {
-
     .botoes {
         flex-direction: column;
     }
@@ -300,4 +228,3 @@ body::before {
         font-size: 50px;
     }
 }
-```
