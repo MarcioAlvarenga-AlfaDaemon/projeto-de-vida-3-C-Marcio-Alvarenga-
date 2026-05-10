@@ -55,14 +55,21 @@ function calculaTempo(tempoObjetivo) {
 // Atualiza os cronômetros
 function atualizaCronometro() {
 
-    for (let i = 0; i < contadores.length; i++) {
+    for (let i = 0; i < tempos.length; i++) {
 
         const tempo = calculaTempo(tempos[i]);
 
-        document.getElementById("dias" + i).textContent = tempo[0];
-        document.getElementById("horas" + i).textContent = tempo[1];
-        document.getElementById("min" + i).textContent = tempo[2];
-        document.getElementById("seg" + i).textContent = tempo[3];
+        const dias = document.getElementById("dias" + i);
+        const horas = document.getElementById("horas" + i);
+        const min = document.getElementById("min" + i);
+        const seg = document.getElementById("seg" + i);
+
+        if (dias && horas && min && seg) {
+            dias.textContent = tempo[0];
+            horas.textContent = tempo[1];
+            min.textContent = tempo[2];
+            seg.textContent = tempo[3];
+        }
     }
 }
 
