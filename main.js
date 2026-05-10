@@ -1,6 +1,5 @@
 const botoes = document.querySelectorAll(".botao");
 const textos = document.querySelectorAll(".aba-conteudo");
-//Percorrer (iterar) uma lista de elementos
 for (let i = 0; i < botoes.length; i++) {
   botoes[i].onclick = function () {
     for (let j = 0; j < botoes.length; j++) {
@@ -11,7 +10,7 @@ for (let i = 0; i < botoes.length; i++) {
     textos[i].classList.add("ativo");
   };
 }
-// document.querySelector("#minhaDiv p").textContent = "Chega de calor";
+
 const contadores = document.querySelectorAll(".contador");
 const tempoObjetivo1 = new Date("2024-04-03T00:00:00");
 const tempoObjetivo2 = new Date("2024-10-17T00:00:00");
