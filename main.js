@@ -16,7 +16,7 @@ for (let i = 0; i < botoes.length; i++) {
 }
 
 // Datas dos objetivos
-const tempoObjetivo1 = new Date("2026-04-03T00:00:00");
+const tempoObjetivo1 = new Date("2026-11-03T00:00:00");
 const tempoObjetivo2 = new Date("2026-10-17T00:00:00");
 const tempoObjetivo3 = new Date("2026-06-25T00:00:00");
 const tempoObjetivo4 = new Date("2026-12-25T00:00:00");
